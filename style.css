@@ -1,0 +1,428 @@
+body{
+  background-color: black;
+  background: url("photos/bg.png") ;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Creepster";
+  position: relative;
+  height: 100dvh;
+  width: 100vw;
+  box-shadow: 0 0 10px rgb(0 0 0) inset,
+  0 0 20px rgb(0 0 0) inset,
+  0 0 40px rgb(0 0 0) inset,
+  0 0 80px rgb(0 0 0) inset,
+  0 0 160px rgb(0 0 0) inset;
+}
+.start {
+  width: 100vw;
+  height: 100dvh;
+  overflow: auto;
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  transition: 2s linear transform;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: -5px 5px 40px rgb(0 0 0 / 40%);
+  font-family: "Comic Neue";
+}
+.start h2 {
+  position: absolute;
+  padding-bottom: 20px;
+  border-bottom: 5px solid red;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  word-spacing: 10px;
+  top: 15px;
+}
+@media (max-width: 640px) {
+  .start h2 {
+    top: 10px;
+    padding-bottom: 5px;
+    font-size: 10px;
+    border-bottom: 2px solid red;
+  }
+  h1, i {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1281px) {
+  .start h2 {
+    top: 15px;
+    padding-bottom: 30px;
+    font-size: 65px;
+    border-bottom: 7px solid red;
+  }
+  h1, i {
+    font-size: 60px;
+  }
+}
+.start > div,
+.start > input {
+  margin: 30px;
+  transform: translateY(0px);
+}
+@media (max-width: 640px) {
+  .start > div, .start > input {
+    margin: 0;
+    transform: scale(.45);
+  }
+  .score {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1281px) {
+  .start > div, .start > input {
+    margin: 50px;
+    transform: scale(1.5);
+  }
+}
+.emoji {
+  font-size: 60px;
+}
+.start input {
+  width: 250px;
+}
+
+.start input::-webkit-slider-thumb {
+  filter: drop-shadow(0 0 2px rgb(0 0 0 / 70%));
+}
+.difficulties .difficulty {
+  padding: 20px;
+  color: white;
+  text-shadow: 1px 1px 10px black;
+  border-radius: 8px;
+}
+.start > p,
+.start > p + span {
+  position: absolute;
+  bottom: 10px;
+}
+@media (max-width: 640px) {
+  .start > p ,
+  .start > p + span{
+    bottom: -25px;
+    transform: scale(.5);
+  }
+}
+@media (min-width: 1281px) {
+  .start > p ,
+  .start > p + span{
+    bottom: 50px;
+    transform: scale(1.7);
+  }
+}
+.start > p {
+  font-size: 30px;
+  color: purple;
+}
+.start > p span {
+  color: red;
+  font-weight: bold;
+}
+.start > p + span {
+  bottom: 25px;
+  left: 53%;
+  font-size: 80px;
+  z-index: -1;
+  opacity: 0;
+  transition: .5s;
+}
+.start > p:hover + span {
+  bottom: 65px;
+  opacity: 1;
+  z-index: 1000;
+}
+@media (max-width: 640px) {
+  .start > p + span {
+    bottom: -10px;
+    left: 52%;
+    font-size: 50px;
+  }
+  .start > p:hover + span {
+    bottom: 15px;
+  }
+}
+@media (min-width: 1281px) {
+  .start > p + span {
+    bottom: 70px;
+    left: 55%;
+    font-size: 70px;
+  }
+  .start > p:hover + span {
+    bottom: 140px;
+  }
+}
+.score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin-top: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.score div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.score p {
+  margin: 0;
+}
+.world {
+  position: absolute;
+  z-index: 500;
+  width: 100vw;
+  height: 100vh;
+}
+.start.horror {
+  background: #121212;
+}
+.start.horror h1{
+  color: red;
+}
+/*__________________________________________________*/
+body > img,
+body .picture{
+  position: absolute;
+}
+.lamp {
+  height: 300px;
+  width: 200px;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+.light {
+  position: absolute;
+  width: 70vw;
+  height: 80vh;
+  border-radius: 50%;
+  background: #bc7b21;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  filter: blur(350px);
+  opacity: .25;
+  animation: flicker 5s infinite;
+}
+@keyframes flicker {
+  93.181% {
+    opacity: .25;
+  }
+  93.182% {
+    opacity: 0;
+  }
+  95.455% {
+    opacity: .25;
+  }
+  97.727% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .25;
+  }
+}
+.picture {
+  width: 150px;
+  height: 250px;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.picture .photo, .picture .boy {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.picture .boy {
+  z-index: -1;
+}
+.picture .photo {
+  width: 160%;
+  left: -30%;
+  height: 130%;
+  top: -20%;
+}
+.picture .bcontainer .container{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 9px;
+  display: inline-block;
+  position: relative;
+  transform: translateY(-1.7px);
+
+}
+.picture .bcontainer {
+  position: absolute;
+  width: fit-content;
+  top: 26.7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.picture .bcontainer .container .eye {
+  width: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  transition: .5s;
+}
+.picture .bcontainer .container:first-child {
+  margin-right: 9.8px;
+  margin-left: 9.8px;
+  transform: translateY(-2px);
+}
+body > p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  color: red;
+}
+.hero, .monster {
+  bottom: 0;
+  height: 70vh;
+  right: 0;
+}
+.monster {
+  left: -220px;
+  bottom: 0;
+  width: 75vw;
+  height: initial;
+}
+body > input {
+  position: absolute;
+  top: 13dvh;
+  right: 11.7vw;
+  width: 60px;
+  padding: 20px;
+  border: 6px solid red;
+  border-radius: 12px;
+  background: #121212;
+  color: red;
+  font-size: 40px;
+  font-family: "Creepster";
+  transition: .1s;
+  &:hover, &:focus {
+    box-shadow: 0 0 40px red,
+    0 0 80px red;
+  }
+}
+body > input:focus {
+  outline: none;
+}
+body > input::placeholder {
+  font-size: 28px;
+}
+.hints {
+  height: 25vh;
+  min-width: 18vw;
+  overflow: auto;
+  position: absolute;
+  left: 13vw;
+  top: 5dvh;
+}
+.hints p {
+  font-size: 35px;
+  color: red;
+  width: fit-content;
+  margin-left: 9vw;
+  transform: translateX(-50%);
+}
+@keyframes rotate {
+  10% {
+    transform: rotate(0);
+  }
+  90% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+@media (max-width: 640px) {
+  .monster {
+    left: -90px;
+  }
+  body > input {
+    right: 60px;
+    width: 30px;
+    height: 20px;
+    font-size: 13px;
+    padding: 10px;
+    border: 3px solid red;
+    border-radius: 6px;
+    &::placeholder {
+      font-size: 13px;
+    }
+  }
+  .lamp {
+    transform: translateX(-50%) translateY(-65px) scale(.45);
+  }
+  .light {
+    top: -5px;
+    transform: translateX(-50%) scale(.55);
+    filter: blur(100px);
+  }
+  .picture {
+    transform: translate(-50%, -50%) scale(.45);
+  }
+  body > p {
+    font-size: 27px;
+  }
+  .hints p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1281px) {
+  body > input {
+    right: 11.9vw;
+    top: 15dvh;
+    width: 90px;
+    height: 60px;
+    font-size: 60px;
+    padding: 30px;
+    border: 9px solid red;
+    border-radius: 18px;
+    &::placeholder {
+      font-size: 50px;
+    }
+  }
+  .lamp {
+    transform: translateX(-50%) translateY(80px) scale(1.5);
+  }
+  .light {
+    top: 170px;
+  }
+  .picture {
+    transform: translate(-50%, -50%) scale(1.45);
+  }
+  body > p {
+    font-size: 80px;
+  }
+  .monster {
+    left: -290px;
+  }
+  .hints p {
+    font-size: 60px;
+  }
+}

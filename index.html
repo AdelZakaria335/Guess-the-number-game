@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Creepster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
+  <title>Guess The Number Game</title>
+</head>
+
+<body>
+  <div class="start">
+    <h2>guess the number game</h2>
+    <div class="emojies">
+      <span class="emoji" data-num="1">😁</span>
+      <span class="emoji" data-num="2">😐</span>
+      <span class="emoji" data-num="3">😡</span>
+    </div>
+    <input type="range" value="1" min="1" max="3" step="1">
+    <div class="difficulties">
+      <span class="difficulty" data-num="1" data-lives="10" style="background: green">Easy</span>
+      <span class="difficulty" data-num="2" data-lives="7" style="background: yellow">Normal</span>
+      <span class="difficulty" data-num="3" data-lives="5" style="background: red">Hard</span>
+    </div>
+    <div class="score">
+      <div>
+        <p id="games">--</p>
+        <p>games</p>
+      </div>
+      <div>
+        <p id="victories">--</p>
+        <p>victories</p>
+      </div>
+    </div>
+    <p>Developed by: <span>Adel Zakaria</span>.</p>
+    <span>👑</span>
+  </div>
+  <img class="world" src="photos/world.png" alt="" />
+
+  <p>Souls: <span id="lives"></span></p>  
+  <img class="lamp" src="photos/lamp.png" alt="" />
+  <div class="light"></div>
+  <img class="hero" src="photos/hero.png" alt="" />
+  <img class="monster" src="photos/monster.png" alt="" />
+  <div class="picture">
+    <img class="photo" src="photos/photo.png" alt="" />
+    <img class="boy" src="photos/boy.png" alt="" />
+    <div class="bcontainer">
+      <div class="container" data-class=".one"><img class="eye one" src="photos/eye.png" alt="" /></div>
+      <div class="container" data-class=".two"><img class="eye two" src="photos/eye.png" alt="" /></div>
+    </div>
+  </div>
+  <input type="number" placeholder="Guess" />
+  <div class="hints"></div>
+  <script type="text/javascript" charset="utf-8" src="main.js"></script>
+</body>
+
+</html>
