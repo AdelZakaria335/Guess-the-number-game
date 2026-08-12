@@ -42,7 +42,7 @@ body{
   word-spacing: 10px;
   top: 15px;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .start h2 {
     top: 10px;
     padding-bottom: 5px;
@@ -69,7 +69,7 @@ body{
   margin: 30px;
   transform: translateY(0px);
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .start > div, .start > input {
     margin: 0;
     transform: scale(.45);
@@ -105,7 +105,7 @@ body{
   position: absolute;
   bottom: 10px;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .start > p ,
   .start > p + span{
     bottom: -25px;
@@ -140,7 +140,7 @@ body{
   opacity: 1;
   z-index: 1000;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .start > p + span {
     bottom: -10px;
     left: 52%;
@@ -359,7 +359,7 @@ body > input::placeholder {
     transform: rotate(-90deg);
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .monster {
     left: -90px;
   }
