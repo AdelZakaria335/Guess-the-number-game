@@ -122,6 +122,7 @@ difficulties.forEach(e => {
       e.style.opacity = "0";
       setTimeout(() => {e.remove()}, 1500);
     })
+    document.documentElement.requestFullscreen();
     music.play();
     music.pause();
     flicker.play();
